@@ -12,7 +12,7 @@
         </div>
 
         <div class="weather-box">
-          <div class="temp">{{Math.round(weather.main.temp) }}</div>
+          <div class="temp">{{Math.round(weather.main.temp)}}° c</div>
           <div class="weather">Rain</div>
         </div>
       </div>
