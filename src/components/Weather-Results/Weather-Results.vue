@@ -22,9 +22,14 @@
       <div class="results__weather-box__weather">
         {{ weatherInfo.weather[0].main }}
       </div>
-      <p class="results__weather-box__weather-description">
-       {{ weatherInfo.weather[0].description }}
-      </p>
+      <div class="results__weather-box__weather-description">
+        <img
+          :src="this.urlBaseOne + weatherInfo.weather[0].icon + this.urlBaseTwo"
+        />
+        <p>
+          {{ weatherInfo.weather[0].description }}
+        </p>
+      </div>
     </div>
   </div>
 </template>
@@ -50,6 +55,8 @@ export default {
       urlBase: "https://api.openweathermap.org/data/2.5/",
       query: "",
       weatherType: "",
+      urlBaseOne: "http://openweathermap.org/img/wn/",
+      urlBaseTwo: "@2x.png",
     };
   },
   methods: {
@@ -104,10 +111,17 @@ export default {
 }
 
 .results__weather-box__weather-description {
+  align-items: center;
   color: white;
+  display: flex;
   font-size: 15px;
   font-weight: 300;
-  text-align: center;
+  height: auto;
+  justify-content: center;
   text-shadow: 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.results__weather-box__weather-description img {
+  width: 30px;
 }
 </style>
