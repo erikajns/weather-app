@@ -9,15 +9,15 @@
 
     <div class="results__weather-box">
       <div class="results__weather-box__temperature">
-        {{ Math.round(weatherInfo.main.temp) }}°
+        {{ Math.round(weatherInfo.main.temp) }}°C
 
         <p class="results__weather-box__max-min-temperature">
-          Max. <b>{{ Math.round(weatherInfo.main.temp_max) }}°</b>/ Min.
-          {{ Math.round(weatherInfo.main.temp_min) }}°
+          Max. <b>{{ Math.round(weatherInfo.main.temp_max) }}°C</b>  /  Min.
+          {{ Math.round(weatherInfo.main.temp_min) }}°C
         </p>
       </div>
       <p class="results__weather-box__feels-like-temperature">
-        Feels Like: {{ Math.round(weatherInfo.main.feels_like) }}°
+        Feels Like: {{ Math.round(weatherInfo.main.feels_like) }}°C
       </p>
       <div class="results__weather-box__weather">
         {{ weatherInfo.weather[0].main }}
