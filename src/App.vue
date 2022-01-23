@@ -36,7 +36,7 @@ export default {
 }
 
 body {
-  font-family: "montserrat", sans-serif;
+  font-family: "muli", sans-serif;
 }
 
 #app {
