@@ -17,8 +17,12 @@
           }}°
         </p>
       </div>
-      <p class="results__weather-box__feels-like-temperature">Feels Like: {{ Math.round(weatherInfo.main.feels_like)}}°</p>
-      <div class="results__weather-box__weather">{{weatherInfo.weather[0].description}}</div>
+      <p class="results__weather-box__feels-like-temperature">
+        Feels Like: {{ Math.round(weatherInfo.main.feels_like) }}°
+      </p>
+      <div class="results__weather-box__weather">
+        {{ weatherInfo.weather[0].main }}
+      </div>
     </div>
   </div>
 </template>
@@ -40,9 +44,15 @@ export default {
     },
   },
   data() {
-      return {
-         urlBase: 'https://api.openweathermap.org/data/2.5/',
+    return {
+      urlBase: "https://api.openweathermap.org/data/2.5/",
       query: "",
+      weatherType: '',
+    };
+  },
+  methods: {
+      setWeatherBg() {
+          this.weatherType = this.weatherInfo.weather[0].main
       }
   },
 };

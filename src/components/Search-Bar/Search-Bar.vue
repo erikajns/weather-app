@@ -1,5 +1,5 @@
 <template>
-  <div class="search-box">
+  <div class="search-box" v-if="showBar">
     <input
       type="text"
       class="search-box__bar"
@@ -13,6 +13,12 @@
 <script>
 export default {
   name: "searchBar",
+  props: {
+    showBar: {
+      type: Boolean,
+      default: false
+    },
+  },
   data() {
     return {
     apiKey: "1c46d1d32df0f228772395763bfcdcc2",
