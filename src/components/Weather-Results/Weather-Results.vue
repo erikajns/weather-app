@@ -12,7 +12,7 @@
         {{ Math.round(weatherInfo.main.temp) }}°
 
         <p class="results__weather-box__max-min-temperature">
-          <b>{{ Math.round(weatherInfo.main.temp_max) }}°</b>/{{
+          Max. <b>{{ Math.round(weatherInfo.main.temp_max) }}°</b>/ Min. {{
             Math.round(weatherInfo.main.temp_min)
           }}°
         </p>
