@@ -3,7 +3,7 @@
     <input
       type="text"
       class="search-box__bar"
-      placeholder="Enter place..."
+      placeholder="Enter country..."
       v-model="query"
       @keypress="fetchWeatherInfo"
     />
@@ -16,13 +16,13 @@ export default {
   props: {
     showBar: {
       type: Boolean,
-      default: false
+      default: false,
     },
   },
   data() {
     return {
-    apiKey: "1c46d1d32df0f228772395763bfcdcc2",
-      urlBase: 'https://api.openweathermap.org/data/2.5/',
+      apiKey: "1c46d1d32df0f228772395763bfcdcc2",
+      urlBase: "https://api.openweathermap.org/data/2.5/",
       query: "",
     };
   },
@@ -47,32 +47,29 @@ export default {
 
 <style lang="css">
 .search-box {
-  width: 100%;
   margin-bottom: 30px;
+  width: 100%;
 }
 
 .search-box .search-box__bar {
-  display: block;
-  width: 100%;
-  padding: 15px;
-
-  color: #313131;
-  font-size: 20px;
-
   appearance: none;
-  border: none;
-  outline: none;
   background: none;
-
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
   background-color: rgba(255, 255, 255, 0.5);
+  border: none;
   border-radius: 0 16px 0 16px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+  color: #313131;
+  display: block;
+  font-size: 20px;
+  outline: none;
+  padding: 15px;
   transition: 0.4s;
+  width: 100%;
 }
 
 .search-box .search-box__bar:focus {
-  box-shadow: 0 0 16px rgba(0, 0, 0, 0.25);
   background-color: rgba(255, 255, 255, 0.75);
   border-radius: 16px 0 16px 0;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.25);
 }
 </style>

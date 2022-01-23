@@ -12,9 +12,8 @@
         {{ Math.round(weatherInfo.main.temp) }}°
 
         <p class="results__weather-box__max-min-temperature">
-          Max. <b>{{ Math.round(weatherInfo.main.temp_max) }}°</b>/ Min. {{
-            Math.round(weatherInfo.main.temp_min)
-          }}°
+          Max. <b>{{ Math.round(weatherInfo.main.temp_max) }}°</b>/ Min.
+          {{ Math.round(weatherInfo.main.temp_min) }}°
         </p>
       </div>
       <p class="results__weather-box__feels-like-temperature">
@@ -47,13 +46,13 @@ export default {
     return {
       urlBase: "https://api.openweathermap.org/data/2.5/",
       query: "",
-      weatherType: '',
+      weatherType: "",
     };
   },
   methods: {
-      setWeatherBg() {
-          this.weatherType = this.weatherInfo.weather[0].main
-      }
+    setWeatherBg() {
+      this.weatherType = this.weatherInfo.weather[0].main;
+    },
   },
 };
 </script>
@@ -73,18 +72,16 @@ export default {
 }
 
 .results__weather-box .results__weather-box__temperature {
-  display: inline-block;
-  padding: 10px 25px;
-  color: white;
-  font-size: 102px;
-  font-weight: 900;
-
-  text-shadow: 1px 3px rgba(0, 0, 0, 0.25);
   background-color: rgba(255, 255, 255, 0.25);
   border-radius: 16px;
-  margin: 30px 0;
-
   box-shadow: 3px 6px rgba(255, 255, 255, 0.25);
+  color: white;
+  display: inline-block;
+  font-size: 102px;
+  font-weight: 900;
+  margin: 30px 0;
+  padding: 10px 25px;
+  text-shadow: 1px 3px rgba(0, 0, 0, 0.25);
 }
 
 .results__weather-box .results__weather-box__max-min-temperature {
@@ -98,8 +95,8 @@ export default {
 .results__weather-box .results__weather-box__weather {
   color: white;
   font-size: 48px;
-  font-weight: 700;
   font-style: italic;
+  font-weight: 700;
   text-shadow: 3px 6px rgba(0, 0, 0, 0.25);
 }
 </style>
