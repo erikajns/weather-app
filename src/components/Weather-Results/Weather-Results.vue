@@ -22,6 +22,9 @@
       <div class="results__weather-box__weather">
         {{ weatherInfo.weather[0].main }}
       </div>
+      <p class="results__weather-box__weather-description">
+       {{ weatherInfo.weather[0].description }}
+      </p>
     </div>
   </div>
 </template>
@@ -98,5 +101,13 @@ export default {
   font-style: italic;
   font-weight: 700;
   text-shadow: 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+.results__weather-box__weather-description {
+  color: white;
+  font-size: 15px;
+  font-weight: 300;
+  text-align: center;
+  text-shadow: 1px 3px rgba(0, 0, 0, 0.25);
 }
 </style>

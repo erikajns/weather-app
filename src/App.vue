@@ -145,12 +145,18 @@ main {
 .welcome-message__button {
   background-color: cadetblue;
   border: none;
-  border-radius: 4px;
+  border-radius: 0 16px 0 16px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
   color: white;
   font-size: 20px;
   margin-top: 25px;
   padding: 10px;
   transition: 0.4s;
+}
+
+.welcome-message__button:hover{
+  cursor: pointer;
+  background-color: rgb(121, 204, 207);
+  border-radius: 16px 0 16px 0;
 }
 </style>
