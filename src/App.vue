@@ -123,8 +123,8 @@ main {
 
 .welcome-message__wrap {
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 0 16px 0 16px;
+  background-color: rgba(25, 25, 25, 0.5);
+  border-radius: 16px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
@@ -156,7 +156,7 @@ main {
 
 .welcome-message__button:hover{
   cursor: pointer;
-  background-color: rgb(121, 204, 207);
+  background-color: rgb(110, 186, 189);
   border-radius: 16px 0 16px 0;
 }
 </style>
