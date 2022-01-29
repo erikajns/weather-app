@@ -4,9 +4,9 @@
       <div class="welcome-message" v-if="showDefault">
         <div class="welcome-message__wrap">
           <h1>WELCOME!</h1>
-          <p>Find out the weather from all countries around the world.</p>
+          <p>Find out the weather from all countries and cities around the world.</p>
           <p>
-            Instructions: Just type in the country you want to know the weather
+            Instructions: Just type in the name of the country or city you want to know the weather of
             in the search box!
           </p>
           <button class="welcome-message__button" @click="onHide">
@@ -130,7 +130,8 @@ main {
   flex-direction: column;
   justify-content: center;
   min-height: 50vh;
-  min-width: 50vh;
+  min-width: 20vw;
+  max-width: 70vw;
   padding: 5%;
   text-align: center;
   transition: 0.4s;
